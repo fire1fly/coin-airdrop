@@ -1,11 +1,7 @@
 .default {
-  color: var(--color-text-main);
+  color: var(--color-white);
 }
 
-.blue {
-  color: var(--color-blue-main);
-}
-
-.red {
-  color: var(--color-red-main);
+.translucent {
+  color: rgba(var(--color-white-rgb) / 50%);
 }

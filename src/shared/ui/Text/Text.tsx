@@ -6,8 +6,7 @@ import cls from './Text.module.scss';
 
 export enum TextColor {
   DEFAULT = 'default',
-  BLUE = 'blue',
-  RED = 'red'
+  TRANSLUCENT = 'translucent'
 }
 
 interface TextProps extends HTMLAttributes<HTMLElement> {
