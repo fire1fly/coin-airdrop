@@ -1,0 +1,45 @@
+.Footer {
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  &_copy {
+    font-family: var(--font-geologica-light);
+    font-size: 16px;
+  }
+
+  &_bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &_soclink {
+    border-radius: 12px;
+    padding: 10px 17px;
+    background: rgba(var(--color-white-rgb) / 10%);
+    font-family: var(--font-geologica-regular);
+    font-size: 15px;
+    color: rgba(var(--color-white-rgb) / 40%);
+    transition: 0.2s;
+
+    &:hover {
+      background: var(--color-theme-main);
+      color: var(--color-white);
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .Footer {
+    padding-bottom: 40px;
+    flex-direction: column;
+
+    &_copy {
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+}
