@@ -52,11 +52,17 @@
   }
 }
 
-.transparent_bordered {
-  border: 1px solid rgba(var(--color-text-main-rgb) / 10%);
-  background: transparent;
+.dark {
+  border-radius: 8px;
+  border: 1px solid #434a89;
+  background: linear-gradient(180deg, rgb(105 120 255 / 22%) 0%, rgb(51 67 206 / 8%) 100%);
+  color: #a4b2ff;
 
   &:hover {
-    background: rgba(0 0 0 / 2%);
+    background: linear-gradient(180deg, rgb(126 139 255 / 22%) 0%, rgb(77 92 226 / 8%) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(180deg, rgb(105 120 255 / 22%) 0%, rgb(51 67 206 / 8%) 100%);
   }
 }
