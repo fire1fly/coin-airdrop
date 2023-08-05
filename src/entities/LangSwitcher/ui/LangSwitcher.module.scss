@@ -1,0 +1,45 @@
+.LangSwitcher {
+  border-radius: 12px;
+  height: 48px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(var(--color-white-rgb) / 10%);
+
+  &_lang {
+    border-radius: 10px;
+    height: 100%;
+    flex: 1 1 auto;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-geologica-regular);
+    font-size: 15px;
+    text-transform: capitalize;
+    color: rgba(var(--color-white-rgb) / 40%);
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:not(.active):hover {
+      background: rgba(var(--color-white-rgb) / 5%);
+      color: var(--color-white);
+    }
+
+    &.active {
+      background: var(--color-theme-main);
+      color: var(--color-white);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .LangSwitcher {
+    height: 39px;
+    padding: 4px;
+
+    &_lang {
+      font-size: 12px;
+    }
+  }
+}
