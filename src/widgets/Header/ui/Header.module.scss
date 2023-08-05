@@ -1,0 +1,80 @@
+.Header {
+  position: relative;
+  height: 60px;
+  z-index: 2;
+
+  &_inner {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &_inf {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+
+    &__link {
+      margin-left: 46px;
+    }
+  }
+
+  &_logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    &_pic {
+      flex: 0 0 auto;
+      width: 38px;
+      height: 38px;
+    }
+
+    &_sep {
+      flex: 0 0 auto;
+      width: 1px;
+      height: 26px;
+      background: rgba(var(--color-white-rgb) / 10%);
+    }
+
+    &_plate {
+      border-radius: 12px;
+      padding: 10px 6px;
+      background: rgba(var(--color-white-rgb) / 10%);
+      font-family: var(--font-geologica-regular);
+      font-size: 15px;
+      color: rgba(var(--color-white-rgb) / 40%);
+    }
+  }
+
+  &_link {
+    font-family: var(--font-geologica-regular);
+    font-size: 15px;
+  }
+
+  &_bar {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+  }
+
+  &_btn {
+    min-width: 154px;
+    padding: 0 5px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .Header {
+    &_logo {
+      &_plate {
+        font-size: 12px;
+      }
+    }
+  }
+}
