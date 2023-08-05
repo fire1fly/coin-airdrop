@@ -1,0 +1,121 @@
+.MainScreen {
+  position: relative;
+  min-height: 900px;
+  background: transparent url("shared/assets/images/mainscreen-bg.png") no-repeat;
+  background-size: 95%;
+  background-position: center bottom;
+
+  &_info {
+    position: relative;
+    z-index: 2;
+    padding: 70px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &_btn {
+    &_plate {
+      padding: 12px 14px;
+      font-family: var(--font-geologica-regular);
+      font-size: 15px;
+      box-shadow: 0 14px 17px 0 rgb(116 67 255 / 23%);
+    }
+
+    &_get {
+      margin-top: 30px;
+      padding: 16px 0;
+      min-width: 160px;
+      font-family: var(--font-geologica-semibold);
+      font-size: 16px;
+    }
+  }
+
+  &_title {
+    margin: 0;
+    max-width: 1010px;
+    font-family: var(--font-geologica-regular);
+    font-weight: normal;
+    font-size: 52px;
+  }
+
+  &_subtitle {
+    margin: 0;
+    font-family: var(--font-geologica-light);
+    font-size: 16px;
+  }
+
+  &_bg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    max-width: 1760px;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1600px) {
+  .MainScreen {
+    min-height: 800px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .MainScreen {
+    min-height: 700px;
+
+    &_title {
+      max-width: 940px;
+      font-size: 42px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .MainScreen {
+    min-height: 600px;
+
+    &_title {
+      max-width: 700px;
+      font-size: 32px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .MainScreen {
+    min-height: 500px;
+
+    &_info {
+      padding-top: 40px;
+    }
+
+    &_title {
+      max-width: 700px;
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .MainScreen {
+    height: 600px;
+    min-height: calc(100vh - 60px);
+    background: transparent url("shared/assets/images/mainscreen-bg-sm.png") no-repeat;
+    background-size: 100%;
+    background-position: center bottom;
+
+    &_info {
+      gap: 20px;
+    }
+
+    &_btn {
+      &_get {
+        margin-top: 0;
+      }
+    }
+  }
+}
