@@ -5,19 +5,19 @@
 
 * {
   box-sizing: border-box;
-  scrollbar-color: transparent var(--color-theme-main);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-theme-darkest) var(--color-theme-main);
 
   &::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
   }
 
   &::-webkit-scrollbar-track {
-    background: transparent;
+    background: var(--color-theme-darkest);
   }
 
   &::-webkit-scrollbar-thumb {
-    border: 1px solid var(--color-grey-1);
     background: var(--color-theme-main);
   }
 }
@@ -37,6 +37,7 @@ textarea {
 }
 
 .app {
+  overflow: hidden;
   min-height: 100vh;
   background: var(--color-theme-darkest);
 }
