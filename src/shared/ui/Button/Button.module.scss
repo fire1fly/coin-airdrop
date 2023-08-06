@@ -58,11 +58,11 @@
   background: linear-gradient(180deg, rgb(105 120 255 / 22%) 0%, rgb(51 67 206 / 8%) 100%);
   color: #a4b2ff;
 
-  &:hover {
+  &:not(:disabled):hover {
     background: linear-gradient(180deg, rgb(126 139 255 / 22%) 0%, rgb(77 92 226 / 8%) 100%);
   }
 
-  &:active {
+  &:not(:disabled):active {
     background: linear-gradient(180deg, rgb(105 120 255 / 22%) 0%, rgb(51 67 206 / 8%) 100%);
   }
 }
