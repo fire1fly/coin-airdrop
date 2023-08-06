@@ -10,9 +10,10 @@ import cls from './Header.module.scss';
 
 interface HeaderProps {
   className?: string;
+  onClickScroll?: () => void;
 }
 
-export const Header: FC<HeaderProps> = ({ className }) => {
+export const Header: FC<HeaderProps> = ({ className, onClickScroll }) => {
   const { t } = useTranslation();
   const { md } = useResponsive();
   return (
@@ -25,7 +26,14 @@ export const Header: FC<HeaderProps> = ({ className }) => {
             <div className={cls.Header_logo_plate}>*coin Airdrop</div>
           </div>
           {
-            md && <AppLink className={classNames(cls.Header_link, cls.Header_inf__link)}>{t('howToGet')}</AppLink>
+            md && (
+              <AppLink
+                onClick={onClickScroll}
+                className={classNames(cls.Header_link, cls.Header_inf__link)}
+              >
+                {t('howToGet')}
+              </AppLink>
+            )
           }
         </div>
 
@@ -34,7 +42,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
           {
             md && (
               <a href="#">
-                <Button className={cls.Header_btn} align="center">
+                <Button className={cls.Header_btn} align="center" onClick={onClickScroll}>
                   {t('connect')}
                 </Button>
               </a>

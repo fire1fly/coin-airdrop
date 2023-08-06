@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
@@ -11,13 +11,11 @@ interface StepsProps {
   className?: string;
 }
 
-export const Steps: FC<StepsProps> = ({ className }) => {
+export const Steps = React.forwardRef<HTMLSelectElement, StepsProps>(({ className }, ref) => {
   const { t } = useTranslation();
   return (
-    <section className={classNames(cls.Steps, className)}>
-      <a href="#">
-        <Button theme={ButtonTheme.DARK} className={cls.Steps_plate}>{t('howItWork')}</Button>
-      </a>
+    <section ref={ref} className={classNames(cls.Steps, className)}>
+      <Button theme={ButtonTheme.DARK} className={cls.Steps_plate} disabled>{t('howItWork')}</Button>
       <Text tag="h2" className={cls.Steps_title}>{t('steps.title')}</Text>
       <Text tag="p" color={TextColor.TRANSLUCENT} className={cls.Steps_subtitle}>{t('steps.subtitle')}</Text>
 
@@ -33,4 +31,4 @@ export const Steps: FC<StepsProps> = ({ className }) => {
       </div>
     </section>
   );
-};
+});
