@@ -23,7 +23,7 @@ export const Header: FC<HeaderProps> = ({ className, onClickScroll }) => {
           <div className={cls.Header_logo}>
             <Logo className={cls.Header_logo_pic} />
             <div className={cls.Header_logo_sep} />
-            <div className={cls.Header_logo_plate}>*coin Airdrop</div>
+            <div className={cls.Header_logo_plate}>Arbitrum Airdrop</div>
           </div>
           {
             md && (

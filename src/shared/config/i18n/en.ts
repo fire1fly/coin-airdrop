@@ -15,7 +15,7 @@ const en = {
     },
     subscribe: 'Subscribe',
     joinus: 'Join us',
-    copyright: 'All rights reserved. *Project name 2023',
+    copyright: 'All rights reserved. Arbitrum Airdrop 2023',
   },
 };
 
